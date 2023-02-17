@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>What is the approximate ratio of people to sheep in New Zealand?</h3>
+                <p id="changetext"> </p>
+                <button id="btn1" onclick='document.getElementById("changetext").innerHTML = "Correct!" '>6 people per sheep</button>
+                <button id="btn2" onclick='document.getElementById("changetext").innerHTML = "Incorrect" '>3 people per sheep</button>
+                <button id="btn3" onclick='document.getElementById("changetext").innerHTML = "Incorrect" '>1 person per 3 sheep</button>
+                <script>
+
+                    const btn1 = document.getElementById('btn1');
+
+                    btn1.addEventListener('click', function onClick() {
+                      btn1.style.backgroundColor = 'green';
+
+                    });
+
+                    const btn2 = document.getElementById('btn2');
+
+                    btn2.addEventListener('click', function onClick() {
+                      btn2.style.backgroundColor = 'red';
+                    });
+
+                    const btn3 = document.getElementById('btn3');
+
+                    btn3.addEventListener('click', function onClick() {
+                      btn3.style.backgroundColor = 'red';
+                    });
+
+
+                </script>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>In which country is it illegal to own only one guinea pig, as a lone guinea pig might get lonely ?</h3>
+                <p id="ctext"> </p>
+                <form id="form">
+                  <label for="answer"></label>
+                  <input type="text" name="answer" id="answer" />
+                  <button id="submit">Submit</button>
+                </form>
+                <script>
+                const submit = document.getElementById("submit");
+
+                  submit.addEventListener("click", validate);
+
+                  function validate(e) {
+                    e.preventDefault();
+
+                    const answer = document.getElementById("answer");
+
+
+                    if (answer.value == "Switzerland" )
+                    {
+                    answer.style.backgroundColor = 'green';
+                    document.getElementById("ctext").innerHTML = "Correct!";
+                    }
+                    else
+                    {
+                    answer.style.backgroundColor = 'red';
+                    document.getElementById("ctext").innerHTML = "Incorrect";
+                    }
+
+                  }</script>
+            </div>
+        </div>
+    </body>
+</html>

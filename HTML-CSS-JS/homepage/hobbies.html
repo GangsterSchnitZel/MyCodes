@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>Chris Webpage</title>
+    </head>
+    <body>
+        <div class="topnav">
+            <a class="active" href="index.html">Home</a>
+            <a href="aboutme.html">Aboutme</a>
+            <a href="hobbies.html">Hobbies</a>
+            <a href="pets.html">Pets</a>
+        </div>
+
+        <p>These are my hobbies!</p>
+        <!-- Container for the image gallery -->
+<div class="container">
+
+    <!-- Full-width images with number text -->
+    <div class="mySlides">
+      <div class="numbertext">1 / 6</div>
+        <img src="mining.JPG" style="width:100%" alt="Hashing">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 6</div>
+        <img src="mushrooms.JPG" style="width:100%" alt="Collect mushrooms in the forest">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 6</div>
+        <img src="visit.JPG" style="width:100%" alt="Visit old castles">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+        <img src="food.JPG" style="width:100%" alt="Cook delicious food">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">5 / 6</div>
+        <img src="tomato.JPG" style="width:100%" alt="Growing my own vegetables">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">6 / 6</div>
+        <img src="repair.JPG" style="width:100%" alt="Repair old cars">
+    </div>
+
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- Image text -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <!-- Thumbnail images -->
+    <div class="row">
+      <div class="column">
+        <img class="demo cursor" src="mining.JPG" style="width:100%" onclick="currentSlide(1)" alt="Hashing">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="mushrooms.JPG" style="width:100%" onclick="currentSlide(2)" alt="Collect mushrooms in the forest">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="visit.JPG" style="width:100%" onclick="currentSlide(3)" alt="Visit old castles">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="food.JPG" style="width:100%" onclick="currentSlide(4)" alt="Cook delicious food">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="tomato.JPG" style="width:100%" onclick="currentSlide(5)" alt="Growing my own vegetables">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="repair.JPG" style="width:100%" onclick="currentSlide(6)" alt="Repair old cars">
+      </div>
+    </div>
+  </div>
+    <script>let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("demo");
+          let captionText = document.getElementById("caption");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          captionText.innerHTML = dots[slideIndex-1].alt;
+        }</script>
+    </body>
+</html>

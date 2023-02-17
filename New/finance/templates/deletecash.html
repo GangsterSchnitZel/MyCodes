@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Delete Cash
+{% endblock %}
+
+{% block main %}
+    <h2>Delete Cash</h2>
+    <form action="/deletecash" method="post">
+
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="new_cash" placeholder="Cash" type="number">
+        </div>
+
+        <button class="btn btn-primary" type="submit">Delete Cash</button>
+
+    </form>
+{% endblock %}

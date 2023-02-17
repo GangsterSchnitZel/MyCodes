@@ -1,0 +1,60 @@
+<style>
+    td:nth-child(1) {
+    color: blue;
+    }
+
+    td:nth-child(2) {
+    color: green;
+    }
+
+    td:nth-child(3) {
+    color: red;
+    }
+
+
+    td:nth-child(4) {
+    color: red;
+    }
+</style>
+
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio of stocks
+{% endblock %}
+
+{% block main %}
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Symbol</th>
+        <th scope="col">Shares</th>
+        <th scope="col">Price</th>
+        <th cope="col">TOTAL</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for stock in stocks %}
+      <tr>
+        <td>{{ stock["symbol"] }}</td>
+        <td>{{ stock["shares"] }}</td>
+        <td>{{ usd(stock["price"]) }}</td>
+        <td>{{ usd(stock["shares"] * stock["price"])  }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan = "2"></td>
+            <td scope ="1">CASH</th>
+            <td scope ="1">{{ usd(cash) }}</td>
+        </tr>
+        <tr>
+            <td colspan = "2"></td>
+            <td scope ="1">All Assets</th>
+            <td scope ="1">{{ usd(total) }}</td>
+        </tr>
+    </tfoot>
+  </table>
+{% endblock %}

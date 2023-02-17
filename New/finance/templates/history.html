@@ -1,0 +1,49 @@
+<style>
+    td:nth-child(1) {
+    color: blue;
+    }
+
+    td:nth-child(2) {
+    color: green;
+    }
+
+    td:nth-child(3) {
+    color: red;
+    }
+
+
+    td:nth-child(4) {
+    color: yellow;
+    }
+</style>
+
+
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Symbol</th>
+        <th scope="col">Shares</th>
+        <th scope="col">Price</th>
+        <th cope="col">Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in transactions %}
+      <tr>
+        <td>{{ row["symbol"] }}</td>
+        <td>{{ row["shares"] }}</td>
+        <td>{{ usd(row["price"]) }}</td>
+        <td>{{ row["date"] }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+
+  </table>
+{% endblock %}

@@ -1,0 +1,176 @@
+body
+{
+    background-image: url('https://blog.frontiersnorth.com/hubfs/SimonGee_MG_7747-1.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+h1
+{
+    color:black;
+    text-decoration:underline;
+    font-size: 50px;
+
+}
+h2
+{
+    color:black;
+    font-size: 30px;
+
+}
+h3
+{
+    color:black;
+    font-size: 25px;
+
+}
+h4
+{
+    color:black;
+    font-size: 20px;
+
+}
+h5
+{
+    color:black;
+    font-size: 15px;
+
+}
+p
+{
+    color:black;
+    font-size:40px;
+}
+.topnav
+{
+    background-color: #333;
+    overflow: hidden;
+}
+
+
+.topnav a
+{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+
+.topnav a:hover
+{
+    background-color: green;
+    color: black;
+}
+.btn {
+    border: none;
+    color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+.danger {background-color: #f44336;}
+.danger:hover {background: #da190b;}
+
+.column
+{
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+
+.row::after
+{
+    content: "";
+    clear: both;
+    display: table;
+}
+* {
+    box-sizing: border-box;
+  }
+
+  /* Position the image container (needed to position the left and right arrows) */
+  .container {
+    position: relative;
+  }
+
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }

@@ -1,0 +1,37 @@
+<style>
+    .name {
+        color: blue;
+        font-weight: bold;
+    }
+
+    .price {
+        color: green;
+    }
+
+    .symbol {
+        color: red;
+        text-transform: uppercase;
+    }
+
+    blockquote {
+        border-left: 5px solid grey;
+        padding-left: 10px;
+        margin: 20px 0;
+    }
+</style>
+
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+  <blockquote>
+    <b>Quoted</b>
+  </blockquote>
+  <h4>Name: <span class="name">{{name}}</span></h4>
+  <h4>Price: <span class="price">{{price}}</span></h4>
+  <h4>Symbol: <span class="symbol">{{symbol}}</span></h4>
+{% endblock %}
